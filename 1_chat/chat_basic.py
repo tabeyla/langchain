@@ -6,7 +6,6 @@ load_dotenv()
 
 model = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
 
-
 result = model.invoke("What is 81 divided by 9?")
 # print(result)
 
