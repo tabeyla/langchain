@@ -5,11 +5,11 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-# from langchain_huggingface import HuggingFaceEmbeddings
-# from sentence_transformers import SentenceTransformer
+from langchain_huggingface import HuggingFaceEmbeddings
+from sentence_transformers import SentenceTransformer
 load_dotenv()
 
-# hf_embeddings = HuggingFaceEmbeddings( model_name="all-MiniLM-L6-v2")
+hf_embeddings = HuggingFaceEmbeddings( model_name="all-MiniLM-L6-v2")
 goog_embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
